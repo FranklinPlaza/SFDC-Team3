@@ -22,6 +22,11 @@ public abstract class HomeBase {
     @CacheLookup
     protected WebElement createNewViewLnk;
     
+	
+	@FindBy(name = "new")
+	@CacheLookup
+	protected WebElement newElementBtn;
+	 
 	public HomeBase() {
 		driver = BrowserManager.getInstance().getDriver();
 		wait = BrowserManager.getInstance().getWait();
@@ -29,5 +34,6 @@ public abstract class HomeBase {
 	}
 	
 	public abstract ViewFormBase clickNewViewLnk ();
+
 
 }
