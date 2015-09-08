@@ -13,12 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * Created by Gisela on 6/28/2015.
  */
 public class ContactsProfile {
-<<<<<<< HEAD
+
 	
     private WebDriver driver;
     private WebDriverWait wait;
-=======
->>>>>>> refs/remotes/upstream/development
 
 
     @FindBy(className = "topName")
@@ -37,13 +35,6 @@ public class ContactsProfile {
     @CacheLookup
     private WebElement editButton;
 
-
-<<<<<<< HEAD
-=======
-    private WebDriver driver;
-    private WebDriverWait wait;
-
->>>>>>> refs/remotes/upstream/development
     public ContactsProfile()
     {
         driver = BrowserManager.getInstance().getDriver();

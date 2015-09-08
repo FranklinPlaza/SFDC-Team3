@@ -25,7 +25,7 @@ public class DeleteContactView {
     	
     	mainApp = new MainApp(); 
         tabBar = mainApp.goToTabBar();
-        contactHome = tabBar.clickContacts();
+        contactHome = tabBar.clickOnContactsHome();
         contactForm = (NewContactForm) contactHome.clickNewViewLnk().setViewName(contactViewName).setViewUniqueName(contactViewUniqueName);
 		contactView = contactForm.clickSaveBtn();
 	}
@@ -35,7 +35,7 @@ public class DeleteContactView {
 		contactView.deleteView();
 		mainApp = new MainApp();
 	    tabBar = mainApp.goToTabBar();
-	    contactHome = tabBar.clickContacts();
+	    contactHome = tabBar.clickOnContactsHome();
 		Assert.assertFalse(contactView.isViewDisplayed(), "Contact View Deleted");	
 		 
 	}

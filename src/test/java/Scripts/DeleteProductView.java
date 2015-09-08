@@ -25,7 +25,7 @@ public class DeleteProductView {
     	
     	mainApp = new MainApp(); 
         tabBar = mainApp.goToTabBar();
-        productHome = tabBar.clickProductsTab();
+        productHome = tabBar.clickOnProductsHome();
         productForm = (NewProductForm) productHome.clickNewViewLnk().setViewName(productViewName).setViewUniqueName(productViewUniqueName);
 		productView = productForm.clickSaveBtn();
 	}

@@ -1,6 +1,5 @@
 package Pages.Base;
 
-import Framework.FormBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;

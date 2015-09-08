@@ -28,7 +28,7 @@ public class EditLeadView {
     	
     	mainApp = new MainApp();  
         tabBar = mainApp.goToTabBar();
-        leadHome = tabBar.clickLeadTab(); 
+        leadHome = tabBar.clickOnLeadTab();
         leadForm = (NewLeadForm) leadHome.clickNewViewLnk().setViewName(leadViewName).setViewUniqueName(leadViewUniqueName);
 		leadView = leadForm.clickSaveBtn();
 	}

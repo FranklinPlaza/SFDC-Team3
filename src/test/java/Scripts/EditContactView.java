@@ -28,7 +28,7 @@ public class EditContactView {
     	
     	mainApp = new MainApp();  
         tabBar = mainApp.goToTabBar();
-        contactHome = tabBar.clickContacts(); 
+        contactHome = tabBar.clickOnContactsHome();
         contactForm = (NewContactForm) contactHome.clickNewViewLnk().setViewName(contactViewName).setViewUniqueName(contactViewUniqueName);
 		contactView = contactForm.clickSaveBtn();
 	}

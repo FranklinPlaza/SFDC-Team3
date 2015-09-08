@@ -106,18 +106,11 @@ public class NewOpportunityForm extends ViewFormBase{
 
     //endregion
 
-<<<<<<< HEAD
+
     public NewOpportunityForm() {  
     	super();
-        mainWindowId = driver.getWindowHandle(); 
-=======
-    public NewOpportunityForm() {
-        driver = BrowserManager.getInstance().getDriver();
-        wait = BrowserManager.getInstance().getWait();
-        PageFactory.initElements(driver, this);
         mainWindowId = driver.getWindowHandle();
 
->>>>>>> refs/remotes/upstream/development
     }
 
     // TODO: Implement method to switch to popup window

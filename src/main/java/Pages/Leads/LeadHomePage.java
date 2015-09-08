@@ -1,6 +1,11 @@
 package Pages.Leads;
 
-import Framework.ElementFormBase;
+import Framework.CommonActions;
+import Pages.Base.ElementFormBase;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
@@ -10,6 +15,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LeadHomePage extends ElementFormBase {
 
+	
+	@FindBy(linkText = "Create New View")
+    @CacheLookup
+    protected WebElement createNewViewLnk;
+	
     public LeadHomePage() {
         super();
     }
@@ -20,4 +30,11 @@ public class LeadHomePage extends ElementFormBase {
         newElementBtn.click();
         return new NewLeadPage();
     }
+    
+    public NewLeadForm clickNewViewLnk() {
+    	CommonActions.click(createNewViewLnk);
+    	return new NewLeadForm();
+    } 
+    
+    
 }

@@ -26,7 +26,7 @@ public class CreateLeadView {
     	
     	mainApp = new MainApp();
         tabBar = mainApp.goToTabBar();
-        leadHome = tabBar.clickLeadTab();    
+        leadHome = tabBar.clickOnLeadTab();   
 	}
 	
 	@Test

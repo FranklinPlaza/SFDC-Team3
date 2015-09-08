@@ -132,7 +132,7 @@ public class EditOpportunity {
         tabBar = mainApp.goToTabBar();
         accountsHome = tabBar.clickOnAccountsHome();
         newAccountForm = accountsHome.clickNewButton();
-        accountProfile = newAccountForm.clickOnAccount(accountName);
+        accountProfile = newAccountForm.c(accountName);
         mainApp = accountProfile.deleteAccount();
         mainApp.clickUserButton().clickLogout();
 

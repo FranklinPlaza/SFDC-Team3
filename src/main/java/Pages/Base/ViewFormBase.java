@@ -1,6 +1,4 @@
 package Pages.Base;
-
-<<<<<<< HEAD
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -53,10 +51,5 @@ public abstract class ViewFormBase {
         CommonActions.setValue(viewUniqueName, viewUniqueNameTxt);
         return this;
     }
-=======
-/**
- * Created by Pablo Zubieta on 04/09/2015.
- */
-public class ViewFormBase {
->>>>>>> refs/remotes/upstream/development
+
 }
