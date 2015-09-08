@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class NewContactForm extends ViewFormBase{
 
+<<<<<<< HEAD
    
     //region Locators
 
@@ -55,6 +56,8 @@ public class NewContactForm extends ViewFormBase{
     //select[@id='name_salutationcon2']
     //@FindBy(xpath = "//select[@id='name_salutationcon2']")
 
+=======
+>>>>>>> refs/remotes/upstream/development
     @FindBy(id = "name_salutationcon2")
     @CacheLookup
     WebElement firstNameCategoryField;
@@ -104,90 +107,6 @@ public class NewContactForm extends ViewFormBase{
     @CacheLookup
     WebElement phoneField;
 
-//    //@FindBy(xpath = "//input[@id='con13']")
-//    @FindBy(id = "con13")
-//    @CacheLookup
-//    WebElement homePhoneField;
-//
-//    @FindBy(xpath = "//input[@id='con12']")
-//    @CacheLookup
-//    WebElement mobileField;
-//
-//    @FindBy(xpath = "//input[@id='con14']")
-//    @CacheLookup
-//    WebElement otherPhoneField;
-//
-//    @FindBy(xpath = "//input[@id='con11']")
-//    @CacheLookup
-//    WebElement faxField;
-//
-//    @FindBy(xpath = "//input[@id='con15']")
-//    @CacheLookup
-//    WebElement emailField;
-//
-//    @FindBy(xpath = "//input[@id='con16']")
-//    @CacheLookup
-//    WebElement assistantField;
-//
-//    @FindBy(xpath = "//input[@id='con17']")
-//    @CacheLookup
-//    WebElement assistantPhoneField;
-//
-//    //Address Information
-//    @FindBy(xpath = "//textarea[@id='con19street']")
-//    @CacheLookup
-//    WebElement mailingStreetField;
-//
-//    @FindBy(xpath = "//input[@id='con19city']")
-//    @CacheLookup
-//    WebElement mailingCityField;
-//
-//
-//    @FindBy(xpath = "//input[@id='con19state']")
-//    @CacheLookup
-//    WebElement mailingStateProvinceField;
-//
-//    @FindBy(xpath = "//input[@id='con19zip']")
-//    @CacheLookup
-//    WebElement mailingZipPostalCodeField;
-//
-//    @FindBy(xpath = "//input[@id='con19country']")
-//    @CacheLookup
-//    WebElement mailingCountryField;
-//
-//    @FindBy(xpath = "//textarea[@id='con18street']")
-//    @CacheLookup
-//    WebElement otherStreetField;
-//
-//    @FindBy(xpath = "//input[@id='con18city']")
-//    @CacheLookup
-//    WebElement otherCityField;
-//
-//    @FindBy(xpath = "//input[@id='con18state']")
-//    @CacheLookup
-//    WebElement otherStateProvinceField;
-//
-//    @FindBy(xpath = "//input[@id='con18zip']")
-//    @CacheLookup
-//    WebElement otherZipPostalField;
-//
-//    @FindBy(xpath = "//input[@id='con18country']")
-//    @CacheLookup
-//    WebElement otherCountryField;
-//
-//    //Additional Information
-//    @FindBy(xpath = "//input[@id='00N1a0000059AO4']")
-//    @CacheLookup
-//    WebElement languagesField;
-//
-//    @FindBy(xpath = "//select[@id='00N1a0000059AO5']")
-//    @CacheLookup
-//    WebElement levelField;
-//
-//    //Description Information
-//    @FindBy(xpath = "//textarea[@cols='75']")
-//    @CacheLookup
-//    WebElement descriptionField;
 
 
     @FindBy(xpath = "//input[@tabindex='32']")
@@ -198,16 +117,22 @@ public class NewContactForm extends ViewFormBase{
     @CacheLookup
     WebElement cancelBtn;
 
+<<<<<<< HEAD
+=======
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+>>>>>>> refs/remotes/upstream/development
     public NewContactForm()
     {
+<<<<<<< HEAD
         super();
+=======
+        driver = BrowserManager.getInstance().getDriver();
+        wait = BrowserManager.getInstance().getWait();
+        PageFactory.initElements(driver, this);
+>>>>>>> refs/remotes/upstream/development
     }
-//
-//    public void selectFirstNameCategory(String categoryFirstName) {
-//        select = new Select(firstNameCategoryField);
-//        select.selectByVisibleText(categoryFirstName);
-//        // addButton.click();
-//    }
     public NewContactForm selectFirstNameCategory(String item) {
         CommonActions.selectItem(firstNameCategoryField, item);
         return this;
@@ -242,11 +167,16 @@ public class NewContactForm extends ViewFormBase{
         CommonActions.setValue(birthDateField, date);
         return this;
     }
-
+/*
     public LookUpWindow clickReportTo() {
         CommonActions.click(reportToField);
+<<<<<<< HEAD
         return new LookUpWindow();
     }
+=======
+        return new LookUpWindow(Driver);
+    }*/
+>>>>>>> refs/remotes/upstream/development
 
     public NewContactForm selectLeadSource(String item) {
         CommonActions.selectItem(leadSourceField, item);
@@ -256,11 +186,14 @@ public class NewContactForm extends ViewFormBase{
     public ContactsProfile clickSaveButton() {
         CommonActions.click(saveBtn);
         return new ContactsProfile();
+<<<<<<< HEAD
     }
     public ContactView clickSaveBtn() {
     	ContactView contactView = (ContactView) new ContactView().setViewName(this.viewNameTxt).setViewUniqueName(this.viewUniqueNameTxt);
     	CommonActions.click(saveBtn);
     	return contactView;
+=======
+>>>>>>> refs/remotes/upstream/development
     }
 
 //    public NewContactForm checkActiveCheckbox() {
