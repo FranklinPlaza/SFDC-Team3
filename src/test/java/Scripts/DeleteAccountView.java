@@ -25,7 +25,7 @@ public class DeleteAccountView {
     	
     	mainApp = new MainApp(); 
         tabBar = mainApp.goToTabBar();
-        accountHome = tabBar.clickAccountsTab();
+        accountHome = tabBar.clickOnAccountsHome();
         accountForm = (NewAccountForm) accountHome.clickNewViewLnk().setViewName(accountViewName).setViewUniqueName(accountViewUniqueName);
 		accountView = accountForm.clickSaveBtn();
 	}
@@ -35,7 +35,7 @@ public class DeleteAccountView {
 		accountView.deleteView();
 		mainApp = new MainApp();
 	    tabBar = mainApp.goToTabBar();
-	    accountHome = tabBar.clickAccountsTab();
+	    accountHome = tabBar.clickOnAccountsHome();
 		Assert.assertFalse(accountView.isViewDisplayed(), "Account View Deleted");	
 		 
 	}

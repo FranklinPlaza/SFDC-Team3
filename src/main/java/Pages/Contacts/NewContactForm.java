@@ -20,89 +20,43 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class NewContactForm extends ViewFormBase{
 
-<<<<<<< HEAD
-   
-    //region Locators
 
-//    @FindBy(id = "cpn1")
-//    @CacheLookup
-//    WebElement CampaingNameField;
-//
-//    @FindBy(id = "cpn16")
-//    @CacheLookup
-//    WebElement ActiveCheckbox;
-//
-//    @FindBy(id = "cpn2")
-//    @CacheLookup
-//    WebElement TypeDropdown;
-//
-//    @FindBy(id = "cpn5")
-//    @CacheLookup
-//    WebElement StartDateField;
-//
-//    @FindBy(id = "Parent")
-//    @CacheLookup
-//    WebElement ParentCampaing;
-//
-//    @FindBy(id = "Parent_lkwgt")
-//    @CacheLookup
-//    WebElement LookUpIcon;
-//
-//    @FindBy(id = "//*[@name='save']")
-//    @CacheLookup
-//    WebElement SaveButton;
-//    //endregion
-
-    //select[@id='name_salutationcon2']
-    //@FindBy(xpath = "//select[@id='name_salutationcon2']")
-
-=======
->>>>>>> refs/remotes/upstream/development
     @FindBy(id = "name_salutationcon2")
     @CacheLookup
     WebElement firstNameCategoryField;
-
-    //@FindBy(xpath = "//input[@id='name_firstcon2']")
+   
     @FindBy(id = "name_firstcon2")
     @CacheLookup
     WebElement firstNameField;
-
-   // @FindBy(xpath = "//input[@id='name_lastcon2']")
+  
     @FindBy(id = "name_lastcon2")
     @CacheLookup
     WebElement lastNameField;
-
-    //@FindBy(xpath = "//input[@id='con4']")
+   
     @FindBy(id = "con4")
     @CacheLookup
     WebElement accountNameField;
-
-    //@FindBy(xpath = "//input[@id='con5']")
+   
     @FindBy(id = "con5")
     @CacheLookup
     WebElement titleField;
-
-    //@FindBy(xpath = "//input[@id='con6']")
+    
     @FindBy(id = "con6")
     @CacheLookup
     WebElement departmentField;
-
-    //@FindBy(xpath = "//input[@data-uidsfdc='39']")
+   
     @FindBy(id = "con7")
     @CacheLookup
     WebElement birthDateField;
 
-    //@FindBy(xpath = "//input[@id='con8']")
     @FindBy(id = "con8")
     @CacheLookup
     WebElement reportToField;
 
-    //@FindBy(xpath = "//select[@id='con9']")
     @FindBy(id = "con9")
     @CacheLookup
     WebElement leadSourceField;
 
-    //@FindBy(xpath = "//input[@id='con10']")
     @FindBy(id = "con10")
     @CacheLookup
     WebElement phoneField;
@@ -117,22 +71,14 @@ public class NewContactForm extends ViewFormBase{
     @CacheLookup
     WebElement cancelBtn;
 
-<<<<<<< HEAD
-=======
-    private WebDriver driver;
-    private WebDriverWait wait;
 
->>>>>>> refs/remotes/upstream/development
     public NewContactForm()
     {
-<<<<<<< HEAD
+
         super();
-=======
-        driver = BrowserManager.getInstance().getDriver();
-        wait = BrowserManager.getInstance().getWait();
-        PageFactory.initElements(driver, this);
->>>>>>> refs/remotes/upstream/development
+
     }
+    
     public NewContactForm selectFirstNameCategory(String item) {
         CommonActions.selectItem(firstNameCategoryField, item);
         return this;
@@ -167,16 +113,7 @@ public class NewContactForm extends ViewFormBase{
         CommonActions.setValue(birthDateField, date);
         return this;
     }
-/*
-    public LookUpWindow clickReportTo() {
-        CommonActions.click(reportToField);
-<<<<<<< HEAD
-        return new LookUpWindow();
-    }
-=======
-        return new LookUpWindow(Driver);
-    }*/
->>>>>>> refs/remotes/upstream/development
+
 
     public NewContactForm selectLeadSource(String item) {
         CommonActions.selectItem(leadSourceField, item);
@@ -186,19 +123,15 @@ public class NewContactForm extends ViewFormBase{
     public ContactsProfile clickSaveButton() {
         CommonActions.click(saveBtn);
         return new ContactsProfile();
-<<<<<<< HEAD
+
     }
+    
     public ContactView clickSaveBtn() {
     	ContactView contactView = (ContactView) new ContactView().setViewName(this.viewNameTxt).setViewUniqueName(this.viewUniqueNameTxt);
     	CommonActions.click(saveBtn);
     	return contactView;
-=======
->>>>>>> refs/remotes/upstream/development
+
     }
 
-//    public NewContactForm checkActiveCheckbox() {
-//        CommonActions.check(ActiveCheckbox);
-//        return this;
-//    }
 
 }

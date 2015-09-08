@@ -43,7 +43,7 @@ public class NewAccountPage {
     public AccountProfile pressSaveBtn() {
         saveBtn.click();
 
-        return new AccountProfile(driver);
+        return new AccountProfile();
     }
 
 }

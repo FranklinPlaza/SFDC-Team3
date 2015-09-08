@@ -26,7 +26,7 @@ public class CreateContactView {
     	
     	mainApp = new MainApp();  
         tabBar = mainApp.goToTabBar();
-        contactHome = tabBar.clickContacts();    
+        contactHome = tabBar.clickOnContactsHome();    
 	}
 	
 	@Test

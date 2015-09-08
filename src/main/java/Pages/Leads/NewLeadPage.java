@@ -2,7 +2,7 @@ package Pages.Leads;
 
 import Framework.BrowserManager;
 import Framework.CommonActions;
-import Framework.FormBase;
+import Pages.Base.FormBase;
 import Framework.Objects.Lead;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -141,14 +141,7 @@ public class NewLeadPage extends FormBase{
 
     public NewLeadPage()
     {
-        driver = BrowserManager.getInstance().getDriver();
-        wait = BrowserManager.getInstance().getWait();
-        PageFactory.initElements(driver, this);
-        try {
-            leadObject = JSONMapper.getLeadData();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+       super();
     }
 
     public Lead getLoadedLead(){

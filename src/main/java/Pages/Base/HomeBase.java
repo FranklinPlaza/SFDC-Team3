@@ -1,17 +1,15 @@
 package Pages.Base;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Framework.BrowserManager;
-<<<<<<< HEAD
 import Framework.CommonActions;
-import Pages.Contacts.NewContactForm;
-import Pages.Leads.NewLeadForm;
-=======
->>>>>>> refs/remotes/upstream/development
-
+import Pages.Accounts.NewAccountPage;
 
 public abstract class HomeBase {
 	
@@ -26,7 +24,11 @@ public abstract class HomeBase {
 	@FindBy(name = "new")
 	@CacheLookup
 	protected WebElement newElementBtn;
-	 
+	
+	@FindBy(xpath = "//*[@name='new' and @type='button']")
+    @CacheLookup
+    WebElement NewButtton;
+	
 	public HomeBase() {
 		driver = BrowserManager.getInstance().getDriver();
 		wait = BrowserManager.getInstance().getWait();
@@ -34,6 +36,10 @@ public abstract class HomeBase {
 	}
 	
 	public abstract ViewFormBase clickNewViewLnk ();
+	
+	public abstract FormBase clickNewViewLnk ();
+	
+	
 
 
 }
