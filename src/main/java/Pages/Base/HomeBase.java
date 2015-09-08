@@ -37,7 +37,7 @@ public abstract class HomeBase {
 	
 	public abstract ViewFormBase clickNewViewLnk ();
 	
-	public abstract FormBase clickNewViewLnk ();
+	
 	
 	
 
