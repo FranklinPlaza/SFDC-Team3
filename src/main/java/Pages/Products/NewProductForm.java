@@ -12,7 +12,9 @@ import org.openqa.selenium.support.ui.Select;
 /**
  * Created by ivan on 28-06-15.
  */
+
 public class NewProductForm extends ViewFormBase{
+
 
     //region Locators
 
@@ -46,14 +48,18 @@ public class NewProductForm extends ViewFormBase{
     @CacheLookup
     private WebElement descriptionTextArea;
 
-    //endregion
+
     
     @FindBy(name = "delID")
     @CacheLookup
     private WebElement deleteBtn;
 
+
+
+
     public NewProductForm() {
         super();
+
     }
 
     public NewProductForm setProductName(String productName) {
@@ -107,7 +113,7 @@ public class NewProductForm extends ViewFormBase{
     public ProductProfile pressSaveBtn() {
         saveBtn.click();
 
-        return new ProductProfile(driver);
+        return new ProductProfile();
     }
 
     public ProductView clickSaveBtn() {

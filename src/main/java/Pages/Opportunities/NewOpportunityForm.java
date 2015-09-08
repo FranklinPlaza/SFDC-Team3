@@ -106,9 +106,11 @@ public class NewOpportunityForm extends ViewFormBase{
 
     //endregion
 
+
     public NewOpportunityForm() {  
     	super();
-        mainWindowId = driver.getWindowHandle(); 
+        mainWindowId = driver.getWindowHandle();
+
     }
 
     // TODO: Implement method to switch to popup window

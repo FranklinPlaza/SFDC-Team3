@@ -25,7 +25,7 @@ public class DeleteLeadView {
     	
     	mainApp = new MainApp(); 
         tabBar = mainApp.goToTabBar();
-        leadHome = tabBar.clickLeadTab();
+        leadHome = tabBar.clickOnLeadTab();
         leadForm = (NewLeadForm) leadHome.clickNewViewLnk().setViewName(leadViewName).setViewUniqueName(leadViewUniqueName);
 		leadView = leadForm.clickSaveBtn();
 	}
@@ -35,7 +35,7 @@ public class DeleteLeadView {
 		leadView.deleteView();
 		mainApp = new MainApp();
 	    tabBar = mainApp.goToTabBar();
-	    leadHome = tabBar.clickLeadTab();
+	    leadHome = tabBar.clickOnLeadTab();
 		Assert.assertFalse(leadView.isViewDisplayed(), "Lead View Deleted");	
 		 
 	}

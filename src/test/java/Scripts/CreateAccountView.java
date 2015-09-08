@@ -30,7 +30,7 @@ public class CreateAccountView {
     	loginPage = new LoginPage();
     	mainApp = loginPage.loginAsPrimaryUser();  
         tabBar = mainApp.goToTabBar();
-        accountHome = tabBar.clickAccountsTab();    
+        accountHome = tabBar.clickOnAccountsHome(); 
 	}
 	
 	@Test

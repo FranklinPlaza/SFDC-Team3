@@ -29,7 +29,7 @@ public class CreateProductView {
     	
     	mainApp = new MainApp(); 
         tabBar = mainApp.goToTabBar();
-        productHome = tabBar.clickProductsTab();    
+        productHome = tabBar.clickOnProductsHome();    
 	}
 	
 	@Test

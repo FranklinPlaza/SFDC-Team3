@@ -22,9 +22,9 @@ import org.testng.annotations.Test;
 
 
 /**
- * Created by Ruber Cuellar
+ * Created by Ruber Cuellar on 8/31/2015.
  */
-public class CreateOpportunity {
+public class DeleteOpportunity {
 
     //region Objects
     private TabBar          tabBar;
@@ -70,12 +70,8 @@ public class CreateOpportunity {
         mainApp = loginPage.loginAsPrimaryUser();
         tabBar = mainApp.goToTabBar();
 
-        //newOpportunityForm = opportunitiesHome.click
-
         accountsHome = tabBar.clickOnAccountsHome();
-
         newAccountForm = accountsHome.clickNewButton();
-
         accountProfile = newAccountForm
                 .setAccountName(accountName)
                 .pressSaveBtn();
@@ -83,11 +79,6 @@ public class CreateOpportunity {
         accountUrl = accountProfile.getUrl();
 
         opportunitiesHome = tabBar.clickOnOpportunitiesHome();
-    }
-
-    @Test
-    public void CreateOpportunity()
-    {
         newOpportunityForm = opportunitiesHome.clickNewButton();
         opportunityProfile = newOpportunityForm
                 .checkPrivateFlag(true)
@@ -104,25 +95,24 @@ public class CreateOpportunity {
                 .chooseDeliveryInstallationStatusDdl(deliveryInstallStatus)
                 .pressSaveBtn();
 
+    }
 
-        Assert.assertEquals(opportunityProfile.getOpportunityName(), opportunityName);
-        Assert.assertEquals(opportunityProfile.getAccountName(), accountName);
-        Assert.assertEquals(opportunityProfile.getStage(), stage);
-        Assert.assertEquals(opportunityProfile.getOrderNumber(), orderNumber);
-        Assert.assertEquals(opportunityProfile.getDeliveryInstallation(), deliveryInstallStatus);
-
+    @Test
+    public void CreateOpportunity()
+    {
+        opportunityProfile.clickDeteleBtn();
+        Assert.assertFalse(opportunityProfile.isOpportunityDisplayed(opportunityName), "Product Deleted");
     }
 
     @AfterTest
     public void afterTest()
     {
-        mainApp = opportunityProfile.clickDeteleBtn();
         tabBar = mainApp.goToTabBar();
         accountsHome = tabBar.clickOnAccountsHome();
         newAccountForm = accountsHome.clickNewButton();
         accountProfile = newAccountForm.clickOnAccount(accountName);
         mainApp = accountProfile.deleteAccount();
         mainApp.clickUserButton().clickLogout();
-
     }
+
 }

@@ -1,5 +1,4 @@
 package Pages;
-
 import Pages.Accounts.AccountsHome;
 import Pages.Chatter.ChatterHome;
 import Framework.BrowserManager;
@@ -7,6 +6,7 @@ import Framework.CommonActions;
 import Pages.Campaigns.CampaignsHome;
 import Pages.Contacts.ContactsHome;
 import Pages.Leads.LeadHome;
+import Pages.Leads.LeadHomePage;
 import Pages.Opportunities.OpportunitiesHome;
 import Pages.Products.ProductsHome;
 
@@ -15,7 +15,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -41,20 +40,22 @@ public class TabBar {
 
     @FindBy(linkText = "Accounts")
     @CacheLookup
-    WebElement accountTab;
+    WebElement accountsTab;
 	
     @FindBy(linkText = "Leads")
     @CacheLookup
     WebElement LeadTab;
 
-    @FindBy(xpath = "//a[@href='/003/o']")
-    @CacheLookup
-    WebElement contactsTab;
+
     //endregion
 
     @FindBy(linkText = "Chatter")
     @CacheLookup
     private WebElement chatterTab;
+
+    @FindBy(linkText = "Contacts")
+    @CacheLookup
+    private WebElement contactsTab;
 
     public TabBar()
     {
@@ -68,33 +69,48 @@ public class TabBar {
         return new CampaignsHome();
     }
 
-    public ContactsHome clickContacts() {
+    public ContactsHome clickOnContactsHome() {
         CommonActions.click(contactsTab);
-        return new ContactsHome(driver);
+        return new ContactsHome();
     }
+
 
     public OpportunitiesHome clickOpportunityTab() {
         CommonActions.click(opportunitiesTab);
 
         return new OpportunitiesHome();
     }
+  
 
-    public ProductsHome clickProductsTab() {
+    public ProductsHome clickOnProductsHome() {
+
         CommonActions.click(productsTab);
-
-        return new ProductsHome(driver);
+        return new ProductsHome();
     }
 
-    public AccountsHome clickAccountsTab() {
-        CommonActions.click(accountTab);
+    public OpportunitiesHome clickOnOpportunitiesHome() {
+        CommonActions.click(opportunitiesTab);
+        return new OpportunitiesHome();
+    }
+    
+    public AccountsHome clickOnAccountsHome() {
+        CommonActions.click(accountsTab);
         return new AccountsHome();
     }
 	
-	public LeadHome clickLeadTab() {
+
+
+	public LeadHomePage clickLead() {
+        CommonActions.click(LeadTab);
+        return new LeadHomePage();
+	}
+	
+	public LeadHome clickOnLeadTab() {
         CommonActions.click(LeadTab);
         return new LeadHome();
-    }
+	}
 
+         
 	public ChatterHome clickOnChatterTab() {
 		CommonActions.click(chatterTab);
 		return new ChatterHome();

@@ -1,5 +1,4 @@
 package Pages.Base;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -52,4 +51,5 @@ public abstract class ViewFormBase {
         CommonActions.setValue(viewUniqueName, viewUniqueNameTxt);
         return this;
     }
+
 }

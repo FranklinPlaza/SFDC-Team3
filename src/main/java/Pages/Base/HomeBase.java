@@ -9,9 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Framework.BrowserManager;
 import Framework.CommonActions;
-import Pages.Contacts.NewContactForm;
-import Pages.Leads.NewLeadForm;
-
+import Pages.Accounts.NewAccountPage;
 
 public abstract class HomeBase {
 	
@@ -26,7 +24,11 @@ public abstract class HomeBase {
 	@FindBy(name = "new")
 	@CacheLookup
 	protected WebElement newElementBtn;
-	 
+	
+	@FindBy(xpath = "//*[@name='new' and @type='button']")
+    @CacheLookup
+    WebElement NewButtton;
+	
 	public HomeBase() {
 		driver = BrowserManager.getInstance().getDriver();
 		wait = BrowserManager.getInstance().getWait();
@@ -34,6 +36,10 @@ public abstract class HomeBase {
 	}
 	
 	public abstract ViewFormBase clickNewViewLnk ();
+	
+	public abstract FormBase clickNewViewLnk ();
+	
+	
 
 
 }
